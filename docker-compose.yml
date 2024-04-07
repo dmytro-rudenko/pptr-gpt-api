@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  pptr-gpt-api:
+    container_name: pptr-gpt-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    stdin_open: true
+    ports:
+      - "3000:3000"
