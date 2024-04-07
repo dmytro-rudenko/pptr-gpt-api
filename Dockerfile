@@ -16,7 +16,7 @@ RUN apk add --no-cache \
       npm
 
 # Install necessary packages for Puppeteer
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
 libgconf-2-4 \
 libasound2 \
 libatk1.0-0 \

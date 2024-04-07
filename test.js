@@ -1,5 +1,5 @@
 const test = async () => {
-    const ask = await fetch("http://localhost:3000/ask", {
+    const ask = await fetch("http://70.34.249.130:3000/ask", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -13,7 +13,7 @@ const test = async () => {
 
     console.log('answer', answer)
 
-    const createChat = await fetch("http://localhost:3000/create-chat", {
+    const createChat = await fetch("http://70.34.249.130:3000/create-chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -27,7 +27,7 @@ const test = async () => {
 
     console.log('chat', chat)
 
-    const sendMessage = await fetch(`http://localhost:3000/chat/send-message`, {
+    const sendMessage = await fetch(`http://70.34.249.130:3000/chat/send-message`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
