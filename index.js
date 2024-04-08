@@ -17,7 +17,12 @@ const main = async () => {
     })
   );
 
-  await pptrGpt.init();
+  // static files
+  app.use(express.static("./node_modules/pptr-gpt/public"));
+
+  await pptrGpt.init({
+    screenshots: true,
+  });
 
   app.get("/", (req, res) => {
     res.send("pptr-gpt api running");
