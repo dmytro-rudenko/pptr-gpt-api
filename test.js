@@ -1,5 +1,7 @@
+const HOST = "199.247.9.86:3000"
+
 const test = async () => {
-    const ask = await fetch("http://199.247.9.86:3000/ask", {
+    const ask = await fetch(`http://${HOST}/ask`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -13,7 +15,7 @@ const test = async () => {
 
     console.log('answer', answer)
 
-    const createChat = await fetch("http://199.247.9.86:3000/create-chat", {
+    const createChat = await fetch(`http://${HOST}/create-chat`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -27,7 +29,7 @@ const test = async () => {
 
     console.log('chat', chat)
 
-    const sendMessage = await fetch(`http://199.247.9.86:3000/chat/send-message`, {
+    const sendMessage = await fetch(`http://${HOST}/chat/send-message`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
