@@ -34,7 +34,7 @@ COPY . /app
 
 RUN npm install
 
-RUN chmod -R 777 ./node_modules/pptr-gpt/public
+RUN if [ -d "./node_modules/pptr-gpt/public" ]; then chmod -R 777 ./node_modules/pptr-gpt/public else echo "Directory does not exist" fi
 
 USER pptruser
 

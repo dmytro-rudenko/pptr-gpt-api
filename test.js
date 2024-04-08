@@ -1,4 +1,4 @@
-const HOST = "localhost:3000" // "199.247.9.86:3000"
+const HOST = "199.247.9.86:3000"
 
 const test = async () => {
     const ask = await fetch(`http://${HOST}/ask`, {
