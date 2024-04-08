@@ -34,6 +34,8 @@ COPY . /app
 
 RUN npm install
 
+RUN chmod -R 777 ./node_modules
+
 USER pptruser
 
 CMD ["node", "index.js"]
